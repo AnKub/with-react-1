@@ -1,0 +1,27 @@
+.attrac__block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.attrac__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.attrac__item a {
+  color: #000;
+  transition: opacity 0.3s ease;
+}
+
+.attrac__item a:hover {
+  color: #000000;
+  font-weight: bold;
+  }
+
+  .attrac__fun{
+  position: absolute;
+  left: 523px;
+  top: 690px;
+  }

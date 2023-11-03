@@ -1,0 +1,13 @@
+.details__block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.details__list {
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  flex-direction: column;
+  gap: 20px;
+}

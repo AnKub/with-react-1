@@ -22,7 +22,7 @@ export default function RoomList ({list}){
 
 function Item({type, pricePerNight: price, currency, capacity}){
 return (
-      <Box className='room'>
+      <Box shadow className='room'>
              <span className='room__title'>{type}</span>
              <span className='room__info'>Total number of guests: {capacity}</span>
              <span className='room__price'>

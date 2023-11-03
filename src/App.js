@@ -5,22 +5,28 @@ import Photo from './component/photo';
 import Price from './component/price';
 import RoomList from './component/room-list';
 import Description from './component/description';
+import Details from './component/details';
+import Amenities from './component/amenities';
+import Contact from './component/contactInf';
+import Properties from './component/properties';
+import Guests from './component/guestsRev';
+import Attractions from './component/attractions';
 
 
 function App() {
   const data = {
-    listing_name: "Іст-Сайд Біл",
+    listing_name: "East Side Bil",
     reviews_summary: {
       average_rating: 4.9,
       total_reviews: 190,
     },
     location: {
-      city: "Остін, Техас",
-      country: "Сполучені Штати",
+      city: " Austin,Texas",
+      country: "USA",
     },
     superhost: true,
 
-    image: "https://picsum.photos/1000/1000",
+    image: "https://wallpaperaccess.com/full/1388084.jpg",
 
     price: {
       original_price: 308,
@@ -59,8 +65,7 @@ function App() {
     ],
 
     description:
-      "Насолоджуйтеся цим чистим, сучасним котеджем, розташованим у затишному, але зручному районі Центрально-Східного Остіна. Натхненний японськими чайними будинками, цей котедж на задньому дворі забезпечує легкий доступ до місць проведення SXSW, фестивалю ACL, центру міста, чудових ресторанів та громадського транспорту, а також пропонує спокійний відпочинок для відпочинку та зарядки.",
-
+    "Enjoy this clean, modern cottage located in a quiet, yet lively area of ​​Central Austin. Filled with Japanese teahouses, this backyard cottage provides easy access to SXSW, the ACL festival, and downtown , wonderful restaurants and huge transport, and also provides a calm solution for recharging and recharging.",
     property_details: {
       guests: 2,
       bedrooms: 1,
@@ -68,7 +73,7 @@ function App() {
       baths: 1,
     },
 
-    neighborhood_info: "Район чарівний, веселий, безпечний і милий...",
+    neighborhood_info: "The area is charming, cheerful, safe and lovely...",
 
     amenities: {
       hasPool: true,
@@ -176,7 +181,21 @@ function App() {
     />.
     <RoomList list={data.roomTypes}/>
     <Description title='Description' children={data.description}/>
+    <Details title='What in...' property_details={data.property_details}/>
     <Description title='About neighbors' children={data.neighborhood_info}/>
+    <Amenities title='Amenities'amenities={data.amenities}/>
+    <Contact name={data.contact_info.name}
+        title={`Owner - ${data.contact_info.name}`}
+        contactImage={data.contact_info.image}
+        response_rate={`${data.contact_info.response_rate}%`}
+        response_time={data.contact_info.response_time}
+        phone={data.contact_info.phone}
+        info={data.contact_info.info}
+      ></Contact>
+         <Properties title="Additional characteristics" properties={data.additional_properties}/>
+         <Guests list={data.guestReviews}/>
+         <Attractions title="Neer attractions" attractions={data.nearbyAttractions}
+      />
   </Page>
   );
 }

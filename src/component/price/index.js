@@ -4,11 +4,10 @@ import ListItem from '../list-item'
 
 export default function Price ({price, discount, currency, ...rest}){
 return (
-<Box className='price'>
+<Box shadow className='price'>
   <div className='price__header'>
-    <span
-      className={`price__value 
-      ${discount ? "price__value--has-discount" :""}`}>
+    <span className={`price__value 
+      ${discount ? "price__value--has-discount" :""}`} >
             {currency}
             {price}
     </span>
