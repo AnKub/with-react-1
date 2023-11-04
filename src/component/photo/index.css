@@ -4,3 +4,8 @@ max-height: 500px;
 object-fit: cover;
 border-radius: 20px;
 }
+.attrac__fun{
+  position: absolute;
+  left: 298px;
+  top: 690px;
+  }
